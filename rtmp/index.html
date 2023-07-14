@@ -39,37 +39,13 @@
         video.src = videoSrc;
       }
     </script>
-  <form method="post">
-    enter information here please:<br>
-    <input type="text" name="textdata"><br>
-    <input type="submit" name="press to submit">
-    
-  </form>
+
 
 	</center>
   </body>
   </font> 
 </html>
 
-<?php
-              
-if(isset($_POST['textdata']))
-{
-$data=$_POST['textdata'];
-
-$fp = fopen('bob.txt', 'a');
-
-fwrite($fp, $data);
-fclose($fp);
-
-$myfile = fopen("bob.txt", "a") or die("Unable to open file!");
-$txt = " \n";
-fwrite($myfile, $txt);
-$txt = "-\n";
-fwrite($myfile, $txt);
-fclose($myfile);
-
-}
-?>
+    
 
 
